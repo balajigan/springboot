@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<!--
+
+<html ng-app="dashApp">
+
+<head>
+  <title> Dashboard </title>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="dashscript.js"></script>
+
+</head>
+
+<body>
+
+    <h1> AngularJS Dashboard </h1>
+<div ng-controller="dashController">
+
+
+   <h1> Hello {{name}} welcome {{myWelcome}}</h1>
+</div>
+</body>
+
+</html>
+
+
+
+-->
+
+
+<html ng-app="AngularChartExample">
+<head>
+    <title>Sales Dashboard</title>
+</head>
+<body>
+    <div ng-view></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+
+    <script src="chart.js"></script>
+    <script>
+        function MainCtrl($scope, $http){
+                 var months =[];
+                  var amounts =[];
+
+             $http.get("/salestrend")
+                 .then(function(response) {
+                  var rxData = response.data;
+                   for(i=0; i<rxData.length; i++)
+                  {
+                      months[i] = rxData[i].month;
+                      amounts[i] = rxData[i].amount;
+                   }
+
+                  var month =data2["month"];
+                  var amount = data2["amount"];
+                  
+               });
+
+
+            var data = {"xData": months,"yData":[{
+                "name": "Monthly sales",
+                "data": amounts
+            }]}
+
+//            var data = {"xData": ["Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],"yData":[{
+//                "name": "Monthly sales",
+//                "data": [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+//            }]}
+            
+             $scope.lineChartYData=data.yData
+             $scope.lineChartXData=data.xData
+        }
+    </script>
+    <script>
+    angular.module('AngularChartExample',['AngularChart'], function( $routeProvider, $locationProvider ){
+        $routeProvider.when('/',{
+            template: '<chart title="Monthly Sales" xData="lineChartXData" yData="lineChartYData" xName="Month" yName="Sales amount" subtitle="Monthly sales for 2016"></chart>',
+            controller: MainCtrl
+            })
+    })
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,38 @@
+2017-12-14 19:08:32.158  INFO instance-1 --- [           main] c.t.s.MainClass                          : Info log
+2017-12-14 19:08:32.159  WARN instance-1 --- [           main] c.t.s.MainClass                          : Hey, This is a warning!
+2017-12-14 19:08:32.160 ERROR instance-1 --- [           main] c.t.s.MainClass                          : Oops! We have an Error. OK
+2017-12-14 19:08:32.160 FATAL instance-1 --- [           main] c.t.s.MainClass                          : Damn! Fatal error. Please fix me.
+2017-12-14 19:08:32.564  INFO instance-1 --- [           main] c.t.s.MainClass                          : Starting MainClass v0.1.0 on instance-1 with PID 13991 (/root/springboot/target/gs-spring-boot-0.1.0.jar started by root in /root/springboot)
+2017-12-14 19:08:32.565  INFO instance-1 --- [           main] c.t.s.MainClass                          : No active profile set, falling back to default profiles: default
+2017-12-14 19:08:32.655  INFO instance-1 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@486d1f91: startup date [Thu Dec 14 19:08:32 UTC 2017]; root of context hierarchy
+2017-12-14 19:08:33.251  INFO instance-1 --- [kground-preinit] o.h.v.i.u.Version                        : HV000001: Hibernate Validator 5.2.4.Final
+2017-12-14 19:08:34.596  INFO instance-1 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-12-14 19:08:34.611  INFO instance-1 --- [           main] o.a.c.c.StandardService                  : Starting service Tomcat
+2017-12-14 19:08:34.612  INFO instance-1 --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet Engine: Apache Tomcat/8.0.33
+2017-12-14 19:08:34.705  INFO instance-1 --- [ost-startStop-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2017-12-14 19:08:34.707  INFO instance-1 --- [ost-startStop-1] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 2067 ms
+2017-12-14 19:08:35.167  INFO instance-1 --- [ost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-14 19:08:35.173  INFO instance-1 --- [ost-startStop-1] o.s.b.c.e.FilterRegistrationBean         : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-14 19:08:35.174  INFO instance-1 --- [ost-startStop-1] o.s.b.c.e.FilterRegistrationBean         : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-14 19:08:35.174  INFO instance-1 --- [ost-startStop-1] o.s.b.c.e.FilterRegistrationBean         : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-14 19:08:35.174  INFO instance-1 --- [ost-startStop-1] o.s.b.c.e.FilterRegistrationBean         : Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-14 19:08:35.600  INFO instance-1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@486d1f91: startup date [Thu Dec 14 19:08:32 UTC 2017]; root of context hierarchy
+2017-12-14 19:08:35.704  INFO instance-1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/sales]}" onto public java.lang.String com.test.springboot.RestAPIController.getSales()
+2017-12-14 19:08:35.705  INFO instance-1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/salestrend]}" onto public java.lang.String com.test.springboot.RestAPIController.getSalesTrend()
+2017-12-14 19:08:35.705  INFO instance-1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logsearch],methods=[GET],produces=[application/json]}" onto public java.lang.Object com.test.springboot.RestAPIController.logsearch(java.lang.String)
+2017-12-14 19:08:35.705  INFO instance-1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dashboard]}" onto public java.lang.String com.test.springboot.RestAPIController.index()
+2017-12-14 19:08:35.708  INFO instance-1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-14 19:08:35.708  INFO instance-1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-14 19:08:35.713  INFO instance-1 --- [           main] o.s.w.s.c.a.WebMvcConfigurerAdapter      : Adding welcome page: class path resource [static/index.html]
+2017-12-14 19:08:35.727  INFO instance-1 --- [           main] o.s.w.s.h.SimpleUrlHandlerMapping        : Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2017-12-14 19:08:35.741  INFO instance-1 --- [           main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-14 19:08:35.741  INFO instance-1 --- [           main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-14 19:08:35.789  INFO instance-1 --- [           main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-14 19:08:35.961  INFO instance-1 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-12-14 19:08:35.998  INFO instance-1 --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2017-12-14 19:08:36.005  INFO instance-1 --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2017-12-14 19:08:36.013  INFO instance-1 --- [           main] o.a.t.u.n.NioSelectorPool                : Using a shared selector for servlet write/read
+2017-12-14 19:08:36.035  INFO instance-1 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-12-14 19:08:36.039  INFO instance-1 --- [           main] c.t.s.MainClass                          : Started MainClass in 3.795 seconds (JVM running for 4.47)
+2017-12-14 19:08:39.518  INFO instance-1 --- [       Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@486d1f91: startup date [Thu Dec 14 19:08:32 UTC 2017]; root of context hierarchy
+2017-12-14 19:08:39.520  INFO instance-1 --- [       Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
